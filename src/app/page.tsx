@@ -6,16 +6,16 @@ import Navbar from "@/components/Navbar";
 import OrderSection from "@/components/OrderSection";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import Lenis from "lenis";
+// import Lenis from "lenis";
 
-const lenis = new Lenis({
-  autoRaf: true,
-});
+// const lenis = new Lenis({
+//   autoRaf: true,
+// });
 
-// Listen for the scroll event and log the event data
-lenis.on('scroll', (e) => {
-  console.log(e);
-});
+// // Listen for the scroll event and log the event data
+// lenis.on('scroll', (e) => {
+//   console.log(e);
+// });
 
 
 export default function Home() {
