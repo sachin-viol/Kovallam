@@ -16,7 +16,7 @@ const OrderSection = () => {
             <TabsTrigger 
               value="delivery" 
               onClick={() => setOrderType("delivery")}
-              className="data-[state=active]:bg-kerala-green data-[state=active]:text-white"
+              className="data-[state=active]:bg-kerala-green data-[state=active]:text-white cursor-pointer"
             >
               <Truck className="mr-2 h-4 w-4" />
               Delivery
@@ -24,7 +24,7 @@ const OrderSection = () => {
             <TabsTrigger 
               value="pickup"
               onClick={() => setOrderType("pickup")}
-              className="data-[state=active]:bg-kerala-green data-[state=active]:text-white"
+              className="data-[state=active]:bg-kerala-green data-[state=active]:text-white cursor-pointer"
             >
               <List className="mr-2 h-4 w-4" />
               Pickup
@@ -32,7 +32,7 @@ const OrderSection = () => {
           </TabsList>
         </Tabs>
 
-        <Button size="lg" className="bg-kerala-gold hover:bg-kerala-gold/90">
+        <Button size="lg" className="bg-kerala-gold hover:bg-kerala-gold/90 cursor-pointer">
           Start {orderType === "delivery" ? "Delivery" : "Pickup"} Order
         </Button>
       </div>

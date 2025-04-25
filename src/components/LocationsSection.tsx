@@ -47,7 +47,7 @@ const LocationsSection = () => {
                 <p className="text-gray-600"><strong>Hours:</strong> {location.hours}</p>
               </div>
               
-              <Button variant="outline" className="w-full border-kerala-green text-kerala-green hover:bg-kerala-green hover:text-white">
+              <Button variant="outline" className="w-full cursor-pointer border-kerala-green text-kerala-green hover:bg-kerala-green hover:text-white">
                 Get Directions
               </Button>
             </Card>

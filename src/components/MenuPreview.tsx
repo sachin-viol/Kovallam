@@ -42,7 +42,7 @@ const MenuPreview = () => {
         </div>
         
         <div className="text-center mt-12">
-          <a href="#" className="inline-block border-b-2 border-kerala-gold text-kerala-brown hover:text-kerala-gold transition-colors">
+          <a href="/menu" className="inline-block border-b-2 border-kerala-gold text-kerala-brown hover:text-kerala-gold transition-colors">
             View Full Menu →
           </a>
         </div>

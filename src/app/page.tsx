@@ -7,6 +7,18 @@ import Navbar from "@/components/Navbar";
 import OrderSection from "@/components/OrderSection";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import Lenis from "lenis";
+import { useEffect } from "react";
+
+const lenis = new Lenis({
+  autoRaf: true,
+});
+
+// Listen for the scroll event and log the event data
+lenis.on('scroll', (e) => {
+  console.log(e);
+});
+
 
 export default function Home() {
   return (
@@ -25,17 +37,17 @@ export default function Home() {
             <Card className="p-6">
               <h3 className="text-xl font-semibold text-kerala-brown mb-4">Private Dining</h3>
               <p className="text-gray-600 mb-4">Host your special occasions in our elegant private dining rooms.</p>
-              <Button variant="outline" className="w-full">Learn More</Button>
+              <Button variant="outline" className="w-full cursor-pointer">Learn More</Button>
             </Card>
             <Card className="p-6">
               <h3 className="text-xl font-semibold text-kerala-brown mb-4">Cooking Classes</h3>
               <p className="text-gray-600 mb-4">Join our expert chefs and learn the art of South Indian cooking.</p>
-              <Button variant="outline" className="w-full">Book Now</Button>
+              <Button variant="outline" className="w-full cursor-pointer">Book Now</Button>
             </Card>
             <Card className="p-6">
               <h3 className="text-xl font-semibold text-kerala-brown mb-4">Catering</h3>
               <p className="text-gray-600 mb-4">Bring the taste of Kerala to your events with our catering service.</p>
-              <Button variant="outline" className="w-full">Get Quote</Button>
+              <Button variant="outline" className="w-full cursor-pointer">Get Quote</Button>
             </Card>
           </div>
         </div>
