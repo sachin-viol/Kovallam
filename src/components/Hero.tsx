@@ -19,7 +19,7 @@ const Hero = () => {
           <Button size="lg" className="bg-kerala-gold text-white hover:bg-kerala-gold/90">
             View Menu
           </Button>
-          <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-kerala-brown">
+          <Button size="lg" variant="outline" className="border-2 border-white text-kerala-terracotta hover:bg-white hover:text-kerala-brown">
             Book a Table
           </Button>
         </div>

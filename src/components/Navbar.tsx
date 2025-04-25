@@ -1,3 +1,4 @@
+'use client';
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { MapPin, Menu } from "lucide-react";
@@ -10,10 +11,12 @@ const Navbar = () => {
     <nav className="fixed w-full bg-kerala-cream/90 backdrop-blur-sm z-50 shadow-sm">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold text-kerala-brown">Kovallam</div>
-          
+          <div className="text-2xl font-bold text-kerala-brown">
+            <Link href="/">Kovallam</Link>
+          </div>
+
           <div className="hidden md:flex items-center space-x-8">
-          <Link href="/menu" className="text-kerala-brown hover:text-kerala-gold transition-colors">Menu</Link>
+            <Link href="/menu" className="text-kerala-brown hover:text-kerala-gold transition-colors">Menu</Link>
             <Link href="/locations" className="text-kerala-brown hover:text-kerala-gold transition-colors">Locations</Link>
             <Link href="/about" className="text-kerala-brown hover:text-kerala-gold transition-colors">About</Link>
             <Button className="bg-kerala-green text-white hover:bg-kerala-green/90">
@@ -22,8 +25,8 @@ const Navbar = () => {
             </Button>
           </div>
 
-          <Button 
-            variant="ghost" 
+          <Button
+            variant="ghost"
             size="icon"
             className="md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}

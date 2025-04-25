@@ -1,3 +1,4 @@
+'use client';
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import LocationsSection from "@/components/LocationsSection";
@@ -6,7 +7,6 @@ import Navbar from "@/components/Navbar";
 import OrderSection from "@/components/OrderSection";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import Image from "next/image";
 
 export default function Home() {
   return (
