@@ -1,103 +1,81 @@
+import Footer from "@/components/Footer";
+import Hero from "@/components/Hero";
+import LocationsSection from "@/components/LocationsSection";
+import MenuPreview from "@/components/MenuPreview";
+import Navbar from "@/components/Navbar";
+import OrderSection from "@/components/OrderSection";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen bg-white">
+      <Navbar />
+      <Hero />
+      <MenuPreview />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* New Special Events Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-kerala-brown text-center mb-12">
+            Special Events
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="p-6">
+              <h3 className="text-xl font-semibold text-kerala-brown mb-4">Private Dining</h3>
+              <p className="text-gray-600 mb-4">Host your special occasions in our elegant private dining rooms.</p>
+              <Button variant="outline" className="w-full">Learn More</Button>
+            </Card>
+            <Card className="p-6">
+              <h3 className="text-xl font-semibold text-kerala-brown mb-4">Cooking Classes</h3>
+              <p className="text-gray-600 mb-4">Join our expert chefs and learn the art of South Indian cooking.</p>
+              <Button variant="outline" className="w-full">Book Now</Button>
+            </Card>
+            <Card className="p-6">
+              <h3 className="text-xl font-semibold text-kerala-brown mb-4">Catering</h3>
+              <p className="text-gray-600 mb-4">Bring the taste of Kerala to your events with our catering service.</p>
+              <Button variant="outline" className="w-full">Get Quote</Button>
+            </Card>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      <OrderSection />
+      <LocationsSection />
+
+      {/* New Awards & Recognition Section */}
+      <section className="py-20 bg-kerala-cream">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold text-kerala-brown mb-12">
+            Awards & Recognition
+          </h2>
+          <div className="grid md:grid-cols-4 gap-8">
+            <div>
+              <div className="text-4xl font-bold text-kerala-gold mb-2">2023</div>
+              <p className="text-kerala-brown">Best South Indian Restaurant</p>
+              <p className="text-gray-600">Culinary Excellence Awards</p>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-kerala-gold mb-2">2022</div>
+              <p className="text-kerala-brown">Chef of the Year</p>
+              <p className="text-gray-600">Food & Wine Magazine</p>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-kerala-gold mb-2">2021</div>
+              <p className="text-kerala-brown">Best Fine Dining</p>
+              <p className="text-gray-600">City Restaurant Awards</p>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-kerala-gold mb-2">2020</div>
+              <p className="text-kerala-brown">Customer Choice</p>
+              <p className="text-gray-600">Dining Excellence</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
     </div>
   );
 }

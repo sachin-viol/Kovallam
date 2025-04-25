@@ -1,5 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-
 export default {
   darkMode: ["class"],
   content: [
@@ -24,6 +23,13 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        kerala: {
+          gold: "#FFA500",
+          green: "#006A4E",
+          terracotta: "#E2725B",
+          cream: "#FFF5E1",
+          brown: "#8B4513",
+        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -52,38 +58,6 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
-        },
-				purpledark: {
-          light: "#2A273A", // Subtle background or elevated surface
-          DEFAULT: "#BDA8FF", // Main accent (mirroring #9b87f5 in dark)
-          dark: "#A68CFF", // Slightly dimmer but still vibrant
-          darker: "#8B75D9", // Deeper tone for components or borders
-          darkest: "#EAE6FD", // Light text or highlights on dark bg
-        },
-        habit: {
-          light: "#F2FCE2",
-          "level-1": "#8FE388",
-          "level-2": "#4BC446",
-          "level-3": "#2EA62A",
-          "level-4": "#196E16",
-        },
-        purple: {
-          light: "#F1F0FB",
-          DEFAULT: "#9b87f5",
-          dark: "#7E69AB",
-          darker: "#6E59A5",
-          darkest: "#1A1F2C",
-        },
-
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -92,36 +66,17 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
-        },
-        "fade-in": {
-          "0%": {
-            opacity: "0",
-            transform: "translateY(10px)",
-          },
-          "100%": {
-            opacity: "1",
-            transform: "translateY(0)",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "fade-in": "fade-in 0.3s ease-out",
       },
     },
   },
